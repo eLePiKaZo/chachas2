@@ -1,0 +1,209 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    position: relative;
+    background-color: #ffc107; 
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px; 
+    height: auto;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: #ffc107; /* Color naranja más intenso */
+    border-radius: 5px;
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 40px;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+    font-weight: normal;
+}
+
+nav ul li .dropdown li a:hover {
+    background-color: #ffc107;
+    color: white;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Sección Hero */
+.hero {
+    background: url('https://via.placeholder.com/') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #ffc107;
+    font-weight: 200;
+    transform: scale(1.4);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+/* imagen abajo  */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Asegúrate de que el contenido no sobresalga */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centro del contenedor */
+    z-index: 2; /* Asegúrate de que el contenido esté por encima del carrusel */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    height: 600px;
+    margin: auto;
+    overflow: hidden; /* Oculta las imágenes que no están en vista */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%; /* Asegura que el contenedor de imágenes ocupe toda la altura del carrusel */
+}
+
+.carousel-images img {
+    min-width: 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 3; /* Asegúrate de que los botones estén por encima del carrusel */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

@@ -1,0 +1,158 @@
+/* Estilos globales */
+html, body {
+    height: 100%; /* Asegura que el html y el body ocupen toda la altura */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex; /* Usar flexbox para el body */
+    flex-direction: column; /* Coloca los elementos en una columna */
+}
+
+
+
+header {
+    position: relative;
+    z-index: 10;
+    background-color: #ffc107; 
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px; 
+    height: auto;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: #ffc107; /* Color naranja más intenso */
+    border-radius: 5px;
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 40px;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+    font-weight: normal;
+}
+
+nav ul li .dropdown li a:hover {
+    background-color: #ffc107;
+    color: white;
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* Sección Hero */
+.hero { background: url('https://via.placeholder.com/') no-repeat center center/cover; color: white; text-align: center; padding: 80px 20px; }
+.hero {
+    background: url('img/chahcas\ (1).jpg') no-repeat center center;
+    background-size: cover; /* Cambia a 'contain' si deseas que la imagen se ajuste sin recortes */
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: calc(10vh - 10px); /* Altura mínima ajustada */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative; /* Asegura que el contenido no se desplace */
+    z-index: 1; /* Asegura que el contenido esté por encima de la imagen */
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.cta-button {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #ffc107;
+    font-weight: 200;
+    transform: scale(1.4);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+

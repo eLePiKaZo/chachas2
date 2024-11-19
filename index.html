@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empanadas Chachas - Cochabamba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo-removebg-preview.png" alt="logo principal" class="logo"> 
+        </a>
+        <img src="img/logo-removebg-preview.png" alt="logo principal" class="logo"> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Inicio</a>
+                    <ul class="dropdown">
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Menú</a>
+                    <ul class="dropdown">
+                        <li><a href="empanadas.html">Empanadas</a></li>
+                        <li><a href="combos.html">Combos</a></li>
+                        <li><a href="bebidas.html">Bebidas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Pedidos</a>
+                    <ul class="dropdown">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="ubicacion.html">Ubicación</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>¡Bienvenidos a Empanadas Chachas!</h1>
+            <p>Las mejores empanadas de Cochabamba, hechas con ingredientes frescos y con tradición familiar.</p>
+            <a href="empanadas.html" class="cta-button boton-carrusel">¡Ordena ya!</a>
+        </div>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="img/chachas si.jpg" alt="Empanada 1">
+                <img src="img/ch 2.jpg" alt="Empanada 2">
+                <img src="img/ch 3.jpg" alt="Empanada 3">
+                <img src="img/chahcas (1).jpg" alt="Empanada 4">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Empanadas Chachas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-images img');
+    currentIndex = (currentIndex + direction + slides.length) % slides.length;
+    const offset = -currentIndex * 100; // Mueve el carrusel
+    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+}
+
+// Opcional: Mover automáticamente el carrusel cada 5 segundos
+setInterval(() => {
+    moveSlide(1);
+}, 5000);
+    </script>
+</body>
+</html>
